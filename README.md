@@ -3,7 +3,7 @@
 ## 2020/03/21
 上传了Homework2（看似简单，其实%……*）
 
-* 设置了全局变量，然后用 TextView 的 setText() 更新界面内容。
+* 设置了全局变量，然后用 TextView 的 setText(String string) 更新界面内容。
 ```
 public static int first_times=0,second_times=0,third_times=0;
 ```
