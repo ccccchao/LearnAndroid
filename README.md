@@ -33,4 +33,17 @@ protected void onDestroy() {
     super.onDestroy();
 }
 ```
+## 2020/03/30
+上传了Homework3
 
+主要用到了：
+* EditText（&密码框）、Spinner、RadioGroup、CheckBox、ImageView
+* 布局嵌套
+* 在activity间传递信息
+
+注：
+* Spinner要设置ArrayListAdapter，选择逻辑的处理是重写OnItemSelectedListener函数。
+* RadioGroup是编写setOnCheckedChangeListener函数。清除选择项的话是调用clearCheck()。
+* CheckBox是让每一个选项实例化，然后利用is_checked编写处理逻辑。清除选择项是分别调用setChecked(false)。
+* ImageView有个setImageResource函数挺好玩的。
+* 用Log来debug好像有点意思。
