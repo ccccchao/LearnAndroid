@@ -47,3 +47,12 @@ protected void onDestroy() {
 * CheckBox是让每一个选项实例化，然后利用is_checked编写处理逻辑。清除选择项是分别调用setChecked(false)。
 * ImageView有个setImageResource函数挺好玩的。
 * 用Log来debug好像有点意思。
+
+## 2020/05/16
+上传了Homework9-VideoPlaye
+* 实现了视频播放、暂停、重新播放
+* 比较简单，主要是VideoView的使用+申请权限
+* 卡了较长时间的是文件路径方面，无论是路径函数的返回值、还是手机实际的存储路径名，都是坑：
+* * Environment.getExternalStorageDirectory() 和 Environment.getExternalStorageDirectory().getAbsolutePath()——返回值都不是根目录的路径，而是/storage/emulated/0
+* * getExternalFileDir("").getAbsolutePath() 的返回值是/storage/emulated/0/Android/data/（包名）/files
+* * 而在手机实际存储中，“/storage/emulated/0/Android”就是根目录下的“Android”文件夹，但是为什么根目录不等于“/storage/emulated/0”呢？？？疑惑了。。。
